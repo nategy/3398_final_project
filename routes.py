@@ -23,7 +23,11 @@ def home():
      url_params = {'Authorization': f'Bearer {YELP_API_KEY}'}
      response = requests.get(YELP_BUISNESS_SEARCH_URL, headers=headers, params=url_params)
      data = response.json()
-     print(data, file=sys.stderr)
+     data_object = data
+     data_list = data_object['businesses'][1]['name']
+     print(data_list, file=sys.stderr)
      return render_template("index.html")
+     #return data
 
-app.run(debug=True)
+if __name__ == "__main__":
+   app.run(debug=True) 
