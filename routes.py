@@ -14,11 +14,9 @@ arr_names = {}
 arr_urls = {}
 arr_ratings = {}
 
-
 @app.route('/')
 def home():
      YELP_API_KEY = os.getenv('YELP_API_KEY')
-    # print(YELP_API_KEY, file=sys.stderr)
      YELP_API_BASE_URL = 'https://api.yelp.com/v3'
      YELP_BUISNESS_URL = '/businesses/search'
      YELP_BUISNESS_SEARCH_URL='https://api.yelp.com/v3/businesses/search?term=tacos&latitude=29.88889&longitude=-97.93889'
@@ -31,24 +29,16 @@ def home():
 
      data = response.json()
 
-     pretty_json_data = json.dumps(data, indent=4, sort_keys=True)
-     #print(pretty_json_data)
-     for index in range(20):   ###MAX IS 20 WE SHOULD PROB DO LESS THO
+     for index in range(20):
         arr_names[index] = data['businesses'][index]['name']
         arr_urls[index] = data['businesses'][index]['image_url']
         arr_ratings[index] = data['businesses'][index]['rating']
-      #print("\n")
      i = random.randint(0, 19)
      name = arr_names[i]
      img_url = arr_urls[i]
      rating = arr_ratings[i]
-     data_object = data
-     #the below returns the name of the first business
-     data_list = data_object['businesses'][1]['name']
-     #print(data_list, file=sys.stderr)
      
      return render_template("index.html", name=name, img_url=img_url, rating=rating)
-     #return data
 
 def randFetcher():
    i = random.randint(0, 19)
