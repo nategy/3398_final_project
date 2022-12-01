@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <style>
-          body{background-color: lightskyblue;}
-     </style>
+     <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='index.css')}}">
 </head>
 <body>
-     <h1>Welcome to our site!</h1>
-     <p>Collaborators: Nason(Nate) Gray & Felix Hernandez</p>
-</body>
-</html>
+     <div class="content-wrapper">
+          <h1>Welcome!</h1>
+          <div class="selection-wrapper">
+               <p>Please enter a city or location to find a tasty meal</p>
+               <p>Enter a type of food you would like to eat:</p>
+               <p>(could be tacos, pizza, delis, etc.)</p>
+          </div>
+          <div class="img-wrapper">
+               <img class="image" src="https://th.bing.com/th/id/R.e321d5dc454fdb7a837ab9e40de55a50?rik=VnPZ4%2b%2b2oK2L2w&pid=ImgRaw&r=0" alt="res" style="size: 50px;"/>
+          </div>
+          <div class="reviews-wrapper">
+               <h3>See what others have said about this food place</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, quas adipisci iusto dolor nisi accusamus ducimus! Obcaecati molestiae autem voluptas doloribus consequuntur voluptate, libero aperiam nemo, quasi delectus minus iste.</p>
+          </div>
+          <p>Collaborators: Nason(Nate) Gray & Felix Hernandez</p>
+     </div>
+</body> 

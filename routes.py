@@ -29,18 +29,23 @@ def home():
      response = requests.get(YELP_BUISNESS_SEARCH_URL, headers=headers, params=url_params)
 
      data = response.json()
+
      pretty_json_data = json.dumps(data, indent=4, sort_keys=True)
      #print(pretty_json_data)
-
      for index in range(20):   ###MAX IS 20 WE SHOULD PROB DO LESS THO
-      arr_names[index] = data['businesses'][index]['name']
-      arr_urls[index] = data['businesses'][index]['url']
-      arr_ratings[index] = data['businesses'][index]['rating']
-      print("\n")
-
+        arr_names[index] = data['businesses'][index]['name']
+        arr_urls[index] = data['businesses'][index]['url']
+        arr_ratings[index] = data['businesses'][index]['rating']
+        print("\n")
      for i in range(20):
-      print(arr_names[i] + arr_urls[i] + str(arr_ratings[i]))
+        print(arr_names[i] + arr_urls[i] + str(arr_ratings[i]))
+     data_object = data
+     #the below returns the name of the first business
+     data_list = data_object['businesses'][1]['name']
+     print(data_list, file=sys.stderr)
      
      return render_template("index.html")
+     #return data
 
-app.run(debug=True)
+if __name__ == "__main__":
+   app.run(debug=True) 
