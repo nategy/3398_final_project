@@ -11,12 +11,21 @@
                <p>Enter a type of food you would like to eat:</p>
                <p>(could be tacos, pizza, delis, etc.)</p>
           </div>
+          <div>
+               {% if name %}
+               <p>The name of the place is {{name}}</p>
+               {% endif %}
+          </div>
           <div class="img-wrapper">
-               <img class="image" src="https://th.bing.com/th/id/R.e321d5dc454fdb7a837ab9e40de55a50?rik=VnPZ4%2b%2b2oK2L2w&pid=ImgRaw&r=0" alt="res" style="size: 50px;"/>
+               {% if img_url %}
+               <img class="image" src="{{ img_url }}" alt="res"/>
+               {% endif %}
           </div>
           <div class="reviews-wrapper">
-               <h3>See what others have said about this food place</h3>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, quas adipisci iusto dolor nisi accusamus ducimus! Obcaecati molestiae autem voluptas doloribus consequuntur voluptate, libero aperiam nemo, quasi delectus minus iste.</p>
+               <h3>See what others have rated this place</h3>
+               {% if rating %}
+               <p>One user rated this place a <b>{{rating}}</b> out of 5</p>
+               {% endif %}
           </div>
           <p>Collaborators: Nason(Nate) Gray & Felix Hernandez</p>
      </div>
