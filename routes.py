@@ -24,6 +24,7 @@ def home():
      response = requests.get(YELP_BUISNESS_SEARCH_URL, headers=headers, params=url_params)
      data = response.json()
      data_object = data
+     #the below returns the name of the first business
      data_list = data_object['businesses'][1]['name']
      print(data_list, file=sys.stderr)
      return render_template("index.html")
