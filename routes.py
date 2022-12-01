@@ -16,10 +16,13 @@ arr_ratings = {}
 
 @app.route('/')
 def home():
+     foods = ["tacos", "deli", "pizza", "wings", "sandwiches", "burgers", "pasta", "salad"]
+     foodtype = random.randint(0, 7)
+     rand_food = foods[foodtype]
      YELP_API_KEY = os.getenv('YELP_API_KEY')
      YELP_API_BASE_URL = 'https://api.yelp.com/v3'
      YELP_BUISNESS_URL = '/businesses/search'
-     YELP_BUISNESS_SEARCH_URL='https://api.yelp.com/v3/businesses/search?term=tacos&latitude=29.88889&longitude=-97.93889'
+     YELP_BUISNESS_SEARCH_URL= f'https://api.yelp.com/v3/businesses/search?term={rand_food}&latitude=29.88889&longitude=-97.93889'
      headers = {
         'Authorization': f'Bearer {YELP_API_KEY}',
         'Content-Type': 'application/json'
@@ -39,3 +42,4 @@ def home():
      rating = arr_ratings[i]
      
      return render_template("index.html", name=name, img_url=img_url, rating=rating)
+
