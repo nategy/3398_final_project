@@ -1,0 +1,21 @@
+body {
+     background-color: bisque;
+}
+
+h1 {
+     text-align: center;
+}
+
+.content-wrapper {
+     width: 500px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin: auto;
+}
+
+.image {
+     height: 390px; width: 500px;
+}
