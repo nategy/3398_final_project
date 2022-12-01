@@ -9,7 +9,7 @@ From Nason:
 https://github.com/nategy/3398_final_project/pull/1
 https://github.com/nategy/3398_final_project/pull/2
 From Felix:
-https://github.com/nategy/3398_final_project/pull/3
+https://github.com/nategy/3398_final_project/pull/3g
 
 LINK TO DEPLOYED APP: icy-dew-9877.fly.dev
 
@@ -21,3 +21,5 @@ classmates, and seeing where our creativities branched off from there.
 Things we didn't enjoy: - fly - flask and react
 
 Technical Requirnments: - flask - beautification
+
+updated
