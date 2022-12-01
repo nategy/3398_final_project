@@ -1,6 +1,6 @@
-# fly.toml file generated for ngfh-foodfetcher on 2022-12-01T15:12:32-06:00
+# fly.toml file generated for icy-dew-9877 on 2022-12-01T16:24:57-06:00
 
-app = "ngfh-foodfetcher"
+app = "icy-dew-9877"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
