@@ -39,12 +39,3 @@ def home():
      rating = arr_ratings[i]
      
      return render_template("index.html", name=name, img_url=img_url, rating=rating)
-
-def randFetcher():
-   i = random.randint(0, 19)
-   name = arr_names[i]
-   img_url = arr_urls[i]
-   rating = arr_ratings[i]
-
-if __name__ == "__main__":
-   app.run(debug=True) 
