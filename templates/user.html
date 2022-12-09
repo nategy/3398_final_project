@@ -7,13 +7,16 @@
      <div class="content-wrapper">
           <h1>Welcome!</h1>
           <div class="selection-wrapper">
+               <h1>A random place has been generated based on your input look below! </h1>
                <p>Please enter a city or location to find a tasty meal</p>
                     <form id="city-form" action="{{url_for('home')}}" method="post" onsubmit="">
+                         <label for="city-name" class="dropdown-button">Enter City ...</label>
                          <div class="dropdown-content">
                               <input type="text" name="city" id="city" placeholder="e.g. Austin"/>
                          </div>
                          <p>Enter a type of food you would like to eat:</p>
                          <p>(could be tacos, pizza, delis, etc.)</p>
+                         <label for="food-type" class="dropdown-button">Enter type of food ...</label>
                          <div class="dropdown-content">
                               <input type="text" id="food" name="food" placeholder="e.g. tacos, deli"/>
                          </div>
